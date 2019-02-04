@@ -1,0 +1,6 @@
+{
+    "html.format.indentHandlebars": true,
+    "html.format.indentInnerHtml": true,
+    "html.format.wrapAttributes": "force-aligned",
+    "html.format.wrapLineLength": 80
+}

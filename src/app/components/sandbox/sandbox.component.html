@@ -1,0 +1,30 @@
+<div class="container">
+  <form (submit)="onSubmit(isEdit)">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" [(ngModel)]="user.name" name="name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" [(ngModel)]="user.email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input type="text" class="form-control" [(ngModel)]="user.phone" name="phone">
+    </div>
+    <div class="form-group">
+      <input type="submit" class="btn btn-success" value="Submit">
+    </div>
+  </form>
+
+  <div class="card card-body" *ngFor="let user of users">
+    <h4 class="card-title">{{user.name}}</h4>
+    <div class="card-text">
+      <ul class="list-group">
+        <li class="list-group-item">{{user.email}}</li>
+        <li class="list-group-item">{{user.phone}}</li>
+        <li class="list-group-item"> <button class="btn btn-primary px-2 py-0 mr-2" (click)="onEditClick(user)">Edit</button> <button class="btn btn-danger px-1 py-0" (click)="onDeleteClick(user.id)">Delete</button></li>
+      </ul>
+    </div>
+  </div>
+</div>
